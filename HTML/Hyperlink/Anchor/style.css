@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-indent: 3%;
+}
+
+p {
+  text-indent: 2%;
+}
+
+ul li {
+  margin: 15px 15px;
+}
+
+hr {
+  display: block;
+  margin-bottom: 500px;
+}

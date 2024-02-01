@@ -3,23 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <meta name="description" content="Web, Storage" />
-    <link rel="icon" href="../img/logo-wpu.png" />
-    <title>Web Storage</title>
+    <title>Local Storage</title>
   </head>
   <body>
-    <header>
-      <h1>Web Programming UNPAS - Web Storage 👋</h1>
-    </header>
-    <section>
-      <blockquote>"Hanya dapat digunakan untuk"</blockquote>
-      <ul>
-        <li>Prefensi User.</li>
-        <li>Setting & Configuration.</li>
-        <li>Score & Leader Boards pada game.</li>
-        <li>Posisi video / audio terakhir.</li>
-      </ul>
-    </section>
+    <h1></h1>
+
+    <button id="ubahNamaBtn">Ubah Nama</button>
+
+    <script>
+      const judul = document.querySelector("h1");
+
+      let nama = localStorage.getItem("nama");
+      if (!nama) {
+        nama = prompt("Masukkan Nama Anda :");
+        localStorage.setItem("nama", nama);
+      }
+
+      judul.innerHTML = `Halo, ${nama}`;
+
+      // Ganti Nama
+      const gantiNama = (e) => {
+        nama = prompt("Ubah Nama Anda :");
+        localStorage.setItem("nama", nama);
+        judul.innerHTML = `Halo, ${nama}`;
+        e.preventDefault();
+      };
+
+      const ubahNamaBtn = document.getElementById("ubahNamaBtn");
+      ubahNamaBtn.addEventListener("click", gantiNama);
+    </script>
   </body>
 </html>

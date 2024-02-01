@@ -83,3 +83,9 @@ toggleBtn.addEventListener("click", () => {
 //     lightMode();
 //   }
 // });
+
+// Menghapus Isi Storage
+const hapusStorage = (e) => {
+  localStorage.clear();
+  e.preventDefault();
+};
